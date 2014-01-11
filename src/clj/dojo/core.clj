@@ -15,8 +15,7 @@
    [:head
     [:title "London Clojure Dojo January 2014"]]
     [:body 
-      [:div#info]
-      [:div#content]
+      [:div#app]
       (include-js "//fb.me/react-0.8.0.js") ; only required in dev build
       (include-js "/out/goog/base.js") ; only required in dev build
       (include-js "/js/dojo.js")

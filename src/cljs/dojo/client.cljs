@@ -1,9 +1,7 @@
 (ns dojo.client
-  (:require-macros [cljs.core.async.macros :refer [go go-loop]]
-                   [dommy.macros :refer [node sel1]])
+  (:require-macros [cljs.core.async.macros :refer [go go-loop]])
   (:refer-clojure :exclude [chars])
   (:require
-    [goog.events :as events]
     [cljs.core.async :refer [<! >! put! close! timeout]] 
     [chord.client :refer [ws-ch]]
     [om.core :as om :include-macros true]

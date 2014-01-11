@@ -1,14 +1,24 @@
-# dojo
+# London Clojurians Dojo January 2014
 
-A Clojure library designed to ... well, that part is up to you.
+A project skeleton to show off Clojurescript, React, Om and Chord
+
+### Suggested reading
+
+There are quite a few concepts within this project, in order to understand what is going on I would suggest looking at the following
+
+* Facebook React http://facebook.github.io/react/docs/tutorial.html
+* Om https://github.com/swannodette/om
+* Chord https://github.com/james-henderson/chord
 
 ## Usage
 
-FIXME
+To compile the clojurescript and launch the web server.
+
+```bash
+lein dev
+```
 
 ## License
-
-Copyright © 2013 FIXME
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

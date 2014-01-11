@@ -10,6 +10,10 @@ There are quite a few concepts within this project, in order to understand what 
 * Om https://github.com/swannodette/om
 * Chord https://github.com/james-henderson/chord
 
+This is also a great read on why Om and React are the future of javascript MVC frameworks
+
+* http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/
+
 ## Usage
 
 To compile the clojurescript and launch the web server.

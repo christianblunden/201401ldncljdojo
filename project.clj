@@ -15,7 +15,6 @@
 
                  [org.clojure/clojurescript "0.0-2138"]
                  [org.clojure/tools.reader "0.8.3"]
-                 [prismatic/dommy "0.1.2"]
                  [om "0.1.5"]]
 
   :plugins [[lein-pdo "0.1.1"]

@@ -35,7 +35,7 @@
   (om/component
     (dom/li nil message)))
 
-(defn bind-msgs [{:keys [ws messages]}]
+(defn listen-for-mesages [{:keys [ws messages]}]
   (go-loop []
     (when-let [msg (<! ws)]
       (om/update! messages conj msg)
@@ -45,7 +45,7 @@
   (reify
     om/IWillMount
     (will-mount [_] 
-      (bind-msgs data))
+      (listen-for-mesages data))
     om/IRender
     (render [_]
       (dom/div nil

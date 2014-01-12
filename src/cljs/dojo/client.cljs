@@ -15,7 +15,7 @@
 (defn send-message [ws e owner]
   (put! ws (om/get-state owner :message-to-send))
   (om/set-state! owner :message-to-send "")
-  false)
+  (.preventDefault e))
 
 (defn the-sender [{:keys [ws]} owner]
   (reify
@@ -34,7 +34,6 @@
 (defn message [{:keys [message]} owner]
   (om/component
     (dom/li nil message)))
-
 
 (defn bind-msgs [{:keys [ws messages]}]
   (go-loop []

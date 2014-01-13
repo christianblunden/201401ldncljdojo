@@ -9,6 +9,12 @@
 
 (enable-console-print!)
 
+; debugging
+; log to console
+; (prn "test")
+; trigger javascript breakpoint
+; (js* "debugger;")
+
 (defn save-message [e owner]
   (om/set-state! owner :message-to-send (.. e -target -value)))
 
@@ -54,8 +60,8 @@
           (om/build-all message (data :messages)))))))
 
 (go 
-  (let [ws (<! (ws-ch "ws://localhost:3000/ws"))
-        app-state (atom {:ws ws :messages [{:message "None Yet!"}]})]
+  (let [ws (<! (ws-ch "ws://localhost:3000/ws")) ; establish web socket connection
+        app-state (atom {:ws ws :messages [{:message "None Yet!"}]})] ; initialise global state of app
         (om/root 
           app-state
           (fn [app owner]
